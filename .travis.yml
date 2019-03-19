@@ -7,4 +7,13 @@ before_install:
 script:
   - docker run dmbondarenko/multi_container npm run test-ci
 
-
+after_success:
+  - docker build -t dmbondarenko/multi_continer_client ./client
+  - docker build -t dmbondarenko/multi_continer_api ./server
+  - docker build -t dmbondarenko/multi_continer_worker ./worker
+  - docker build -t dmbondarenko/multi_continer_server ./nginx
+  - echo "$DOCKER_PASS" | docker loign -u "$DOCKER_USERNAME" --password-stdin
+  - docker push dmbondarenko/multi_continer_client
+  - docker push dmbondarenko/multi_continer_api
+  - docker push dmbondarenko/multi_continer_worker
+  - docker push dmbondarenko/multi_continer_server
