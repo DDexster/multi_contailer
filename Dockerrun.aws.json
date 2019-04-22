@@ -13,14 +13,14 @@
       "image": "dmbondarenko/multi_container_api",
       "hostname": "api",
       "essential": false,
-      "memory": 128
+      "memory": 64
     },
     {
       "name": "worker",
       "image": "dmbondarenko/multi_container_worker",
       "hostname": "worker",
       "essential": false,
-      "memory": 128
+      "memory": 64
     },
     {
       "name": "nginx",
