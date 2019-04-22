@@ -5,18 +5,18 @@
       "name": "client",
       "image": "dmbondarenko/multi_container_client",
       "hostname": "client",
-      "essential": false,
+      "essential": false
     },
     {
       "name": "server",
       "image": "dmbondarenko/multi_container_api",
       "hostname": "api",
-      "essential": false,
+      "essential": false
     },
     {
       "name": "worker",
       "image": "dmbondarenko/multi_container_worker",
-      "essential": false,
+      "essential": false
     },
     {
       "name": "nginx",
