@@ -12,7 +12,7 @@ RUN npm run build --silent
 
 
 
-FROM nginx:stable-alpine
+FROM nginx:mainline-alpine
 
 EXPOSE 3000
 
